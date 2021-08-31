@@ -1,9 +1,11 @@
 package com.sales.market.model;
 
+import com.sales.market.dto.CategoryDto;
+
 import javax.persistence.Entity;
 
 @Entity
-public class Category extends ModelBase {
+public class Category extends ModelBase<CategoryDto> {
     private String name;
     private String code;
 

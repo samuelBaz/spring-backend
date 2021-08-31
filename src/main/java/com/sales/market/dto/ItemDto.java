@@ -1,17 +1,13 @@
-package com.sales.market.model;
+package com.sales.market.dto;
 
-import com.sales.market.dto.ItemDto;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
+import com.sales.market.model.Item;
 
-@Entity
-public class Item extends ModelBase<ItemDto> {
+public class ItemDto extends ModelBaseDto<Item> {
     private String name;
     private String code;
     private Byte[] image;
-    @OneToOne(targetEntity = SubCategory.class)
-    private SubCategory subCategory;
+    private SubCategoryDto subCategory;
 
     public String getName() {
         return name;
@@ -37,11 +33,11 @@ public class Item extends ModelBase<ItemDto> {
         this.image = image;
     }
 
-    public SubCategory getSubCategory() {
+    public SubCategoryDto getSubCategory() {
         return subCategory;
     }
 
-    public void setSubCategory(SubCategory subCategory) {
+    public void setSubCategory(SubCategoryDto subCategory) {
         this.subCategory = subCategory;
     }
 }

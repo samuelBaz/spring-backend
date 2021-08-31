@@ -1,21 +1,14 @@
-package com.sales.market.model;
+package com.sales.market.dto;
 
-import com.sales.market.dto.EmployeeDto;
+import com.sales.market.model.Employee;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
 import java.util.List;
 
-@Entity
-public class Employee extends ModelBase<EmployeeDto> {
+public class EmployeeDto extends ModelBaseDto<Employee> {
     private String firstName;
     private String lastName;
     private Byte[] image;
-
-    @OneToMany(mappedBy = "employee", fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
-    private List<Contract> contracts;
+    private List<ContractDto> contracts;
 
     public String getFirstName() {
         return firstName;
@@ -41,11 +34,11 @@ public class Employee extends ModelBase<EmployeeDto> {
         this.image = image;
     }
 
-    public List<Contract> getContracts() {
+    public List<ContractDto> getContracts() {
         return contracts;
     }
 
-    public void setContracts(List<Contract> contracts) {
+    public void setContracts(List<ContractDto> contracts) {
         this.contracts = contracts;
     }
 }

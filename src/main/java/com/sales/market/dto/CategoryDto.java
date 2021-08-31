@@ -1,11 +1,8 @@
-package com.sales.market.model;
+package com.sales.market.dto;
 
-import com.sales.market.dto.SubCategoryDto;
+import com.sales.market.model.Category;
 
-import javax.persistence.Entity;
-
-@Entity
-public class SubCategory extends ModelBase<SubCategoryDto> {
+public class CategoryDto extends ModelBaseDto<Category> {
     private String name;
     private String code;
 

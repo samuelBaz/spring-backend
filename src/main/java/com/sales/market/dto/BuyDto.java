@@ -1,18 +1,14 @@
 /**
  * @author: Samuel Bazoalto
  */
-package com.sales.market.model;
+package com.sales.market.dto;
 
-import com.sales.market.dto.BuyDto;
+import com.sales.market.model.Buy;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
 import java.math.BigDecimal;
 
-@Entity
-public class Buy extends ModelBase<BuyDto> {
+public class BuyDto extends ModelBaseDto<Buy> {
 
-    @Column(precision = 10, scale = 5)
     private BigDecimal value;
 
     public BigDecimal getValue() {

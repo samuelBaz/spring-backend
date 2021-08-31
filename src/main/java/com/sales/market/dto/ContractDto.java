@@ -1,35 +1,30 @@
-package com.sales.market.model;
+package com.sales.market.dto;
 
-import com.sales.market.dto.ContractDto;
+import com.sales.market.model.Contract;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import java.util.Date;
 
-@Entity
-public class Contract extends ModelBase<ContractDto> {
-    @ManyToOne(optional = false)
-    private Employee employee;
-    @OneToOne(optional = false)
-    private Position position;
+public class ContractDto extends ModelBaseDto<Contract> {
+
+    private EmployeeDto employee;
+    private PositionDto position;
     private Date initDate;
     private Date endDate;
     private boolean isActive;
 
-    public Employee getEmployee() {
+    public EmployeeDto getEmployee() {
         return employee;
     }
 
-    public void setEmployee(Employee employee) {
+    public void setEmployee(EmployeeDto employee) {
         this.employee = employee;
     }
 
-    public Position getPosition() {
+    public PositionDto getPosition() {
         return position;
     }
 
-    public void setPosition(Position position) {
+    public void setPosition(PositionDto position) {
         this.position = position;
     }
 
