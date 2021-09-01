@@ -4,6 +4,7 @@
 package com.sales.market.dto;
 
 import com.sales.market.model.Buy;
+import org.modelmapper.ModelMapper;
 
 import java.math.BigDecimal;
 
