@@ -13,7 +13,7 @@ import javax.persistence.OneToOne;
 public class ItemInstance extends ModelBase<ItemInstanceDto> {
     @OneToOne
     private Item item;
-    private String identifier;// sku
+    private String identifier;
 
     private Boolean featured = Boolean.FALSE;
 

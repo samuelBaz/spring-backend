@@ -1,11 +1,10 @@
 package com.sales.market.dto;
 
-import com.sales.market.model.Feature;
 import com.sales.market.model.FeatureInstance;
 
 public class FeatureInstanceDto extends ModelBaseDto<FeatureInstance> {
     private String value;
-    private Feature feature;
+    private FeatureDto feature;
 
     public String getValue() {
         return value;
@@ -15,11 +14,11 @@ public class FeatureInstanceDto extends ModelBaseDto<FeatureInstance> {
         this.value = value;
     }
 
-    public Feature getFeature() {
+    public FeatureDto getFeature() {
         return feature;
     }
 
-    public void setFeature(Feature feature) {
+    public void setFeature(FeatureDto feature) {
         this.feature = feature;
     }
 }

@@ -14,10 +14,10 @@ import java.math.BigDecimal;
 
 @Component
 public class DevelopmentBootstrap implements ApplicationListener<ContextRefreshedEvent> {
-    private BuyRepository buyRespository;
+    private BuyRepository buyRepository;
 
-    public DevelopmentBootstrap(BuyRepository buyRespository) {
-        this.buyRespository = buyRespository;
+    public DevelopmentBootstrap(BuyRepository buyRepository) {
+        this.buyRepository = buyRepository;
     }
 
     @Override
@@ -30,6 +30,6 @@ public class DevelopmentBootstrap implements ApplicationListener<ContextRefreshe
     private void persistBuy(BigDecimal value) {
         Buy buy = new Buy();
         buy.setValue(value);
-        buyRespository.save(buy);
+        buyRepository.save(buy);
     }
 }
