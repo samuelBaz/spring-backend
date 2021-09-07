@@ -21,4 +21,8 @@ public class BuyService{
         Buy buyPersisted = buyRepository.save(buy);
         return  buyPersisted;
     }
+
+    public Buy getById(Long id){
+        return buyRepository.getById(id);
+    }
 }
